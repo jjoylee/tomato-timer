@@ -32,7 +32,7 @@ const TIMER_DURATION = 1500
 const initialState = {
     isPlaying : false,
     elapsedTime : 0,
-    timerDuration : TIME_DURATION
+    timerDuration : TIMER_DURATION
 }
 
 function reducer(state = initialState, action){
@@ -43,6 +43,8 @@ function reducer(state = initialState, action){
             return applyRestartTimer(state);
         case RESTART_TIMER:
             return applyAddSecond(state);
+        default:
+            return state;
     }
 }
 
@@ -86,4 +88,4 @@ const actionCreators = {
 
 // Export Reducer
 
-export default Reducer
+export default reducer
