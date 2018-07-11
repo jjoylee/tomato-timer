@@ -87,5 +87,5 @@ const actionCreators = {
 }
 
 // Export Reducer
-
-export default reducer
+export { actionCreators };
+export default reducer;
